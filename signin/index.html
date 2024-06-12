@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+            background-color: #2b2b2b;
+        }
+
+        .box {
+            background-color: black;
+            border: 2px solid rgb(255, 255, 255);
+            width: 400px;
+            height: 410px;
+            padding-top: 10px;
+        }
+
+        .box h1 {
+            font-family: sans-serif;
+            color: white;
+            text-align: center;
+            border-bottom: 4px solid white;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding-bottom: 35px;
+
+        }
+
+        .img1 img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: relative;
+            top: -19px;
+            left: 35px;
+            /* padding-left: 20px; */
+            margin: 0px 20px;
+        }
+
+        .box h3 {
+            color: white;
+            text-align: center;
+        }
+
+        .box p {
+            text-align: center;
+            color: white;
+
+        }
+
+        .list {
+            padding-top: 15px;
+        }
+
+        .list ul li {
+            color: white;
+            padding: 5px 0px;
+            position: relative;
+            left: 25px;
+            font-size: 15px;
+            max-width: 374px;
+
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        .form input[type=text] {
+            width: 375px;
+            border-radius: 12px;
+            height: 30px;
+            background-color: rgb(128, 127, 127);
+            color: white;
+            padding: 10px;
+
+        }
+
+        .form input[type=text]::placeholder {
+            color: white;
+            padding-left: 10px;
+        }
+
+        .text {
+            display: flex;
+        }
+
+        .form .text input[type=text] {
+            width: 175px;
+            margin: 4px 6px;
+            padding-left: 10px;
+        }
+
+        .form button {
+            height: 30px;
+            width: 60px;
+            background-color: rgb(70, 220, 157);
+            color: white;
+            font-weight: bold;
+            border-radius: 12px;
+            position: relative;
+            left: 145px;
+            margin: 5px 0px;
+        }
+
+        .email {
+            display: none;
+            position: relative;
+            bottom: 76px;
+            left: 11px;
+        }
+
+        .email input[type=email] {
+            width: 375px;
+            height: 30px;
+            background-color: rgb(128, 127, 127);
+            border-radius: 12px;
+        }
+
+        .email input[type=email]::placeholder {
+            color: white;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Sign Up</h1>
+        <div class="img1">
+            <img src="assets/profilelogo.png" alt="">
+            <img src="assets/meassagebox.png" alt="">
+            <img src="assets/keybox.jpeg" alt="">
+            <img src="assets/trophycup.png" alt="">
+        </div>
+        <h3 id="header">User Name</h3>
+        <p><i id="paragraph">Username is your online identity</i></p>
+        <div class="list">
+
+            <ul>
+                <li id="first-list">Your username should only contain letters, numbers, underscore or hyphens</li>
+                <li id="second-list">No spaces or special characters allowed</li>
+                <li id="third-list">Your username should not be offensive or contain profanity</li>
+            </ul>
+        </div>
+        <div class="form" id="form">
+            <input type="text" placeholder="User Name">
+            <div class="text">
+
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <button onclick="next()">Next</button>
+        </div>
+        <div class="email" id="email">
+            <input type="email" placeholder="Email">
+        </div>
+
+        <script>
+            function next() {
+                let header = document.getElementById("header").innerHTML = "Email"
+                let paragraph = document.getElementById("paragraph").innerHTML = "Email is the gateway to your digital life"
+                let li1 = document.getElementById("first-list").innerHTML = "please enter valid email in format 'example@gmail.com'"
+                let li2 = document.getElementById("second-list").innerHTML = "we value your privacy and will never use your email for any unauthorized purpose"
+                let li3 = document.getElementById("third-list").innerHTML = "Please don't use email that belong to someone else."
+                let li4 = document.createElement("li").innerHTML = "please dont use email that includes personal information"
+                let form=document.getElementById("form").style.display="none"
+                let email=document.getElementById("email")=style.display="block"
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>
