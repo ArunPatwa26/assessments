@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function arr(one, two) {
+
+            let Bob = 0;
+            let Alice = 0;
+            for (let i = 0; i < one.length; i++) {
+                
+
+                if (one[i] > two[i]) {
+                    Alice++;
+                    console.log("Alice increment", Alice);
+                } else if (one[i] < two[i]) {
+                    Bob++;
+                    console.log("Bob increment", Bob);
+                } else {
+                    console.log('nothing');
+
+                }
+
+            }
+
+        }
+
+
+        one = [5, 10, 20]
+        two = [10, 5, 10]
+        arr(one, two)
+
+    </script>
+</body>
+
+</html>
